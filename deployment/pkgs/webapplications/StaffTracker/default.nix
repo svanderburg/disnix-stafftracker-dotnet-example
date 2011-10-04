@@ -1,3 +1,4 @@
+{GeolocationService, RoomService, StaffService, ZipcodeService}:
 {dotnetenv}:
 
 dotnetenv.buildSolution {
@@ -6,4 +7,7 @@ dotnetenv.buildSolution {
   baseDir = "StaffTracker";
   slnFile = "StaffTracker.csproj";
   targets="Package";
+  preBuild = ''
+    
+  '';
 }
