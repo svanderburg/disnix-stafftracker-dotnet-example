@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="b89cd7d4-3026-4c67-b9be-3cb3f57ef022" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50974/StaffService.svc?wdsl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="StaffService.xsd" MetadataType="Schema" ID="a1015464-fda1-42cd-9bd3-8d9c165ae35a" SourceId="1" SourceUrl="http://localhost:50974/StaffService.svc?xsd=xsd2" />
+    <MetadataFile FileName="StaffService1.xsd" MetadataType="Schema" ID="bc4b2665-e986-4ada-8f74-9a9cc1d75d69" SourceId="1" SourceUrl="http://localhost:50974/StaffService.svc?xsd=xsd1" />
+    <MetadataFile FileName="StaffService.disco" MetadataType="Disco" ID="ef52c775-cb58-4d96-924f-bc6b823c743b" SourceId="1" SourceUrl="http://localhost:50974/StaffService.svc?disco" />
+    <MetadataFile FileName="StaffService2.xsd" MetadataType="Schema" ID="26408654-3a37-4498-81e7-cbf8dcf4c2c0" SourceId="1" SourceUrl="http://localhost:50974/StaffService.svc?xsd=xsd0" />
+    <MetadataFile FileName="StaffService.wsdl" MetadataType="Wsdl" ID="d826c750-1b97-4230-bcd4-55fac1c0b5fc" SourceId="1" SourceUrl="http://localhost:50974/StaffService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

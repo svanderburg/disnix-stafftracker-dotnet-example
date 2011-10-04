@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://localhost:50174/ZipcodeService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/ZipcodeService" />
+  <xs:element name="QueryZipcode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zipcodeKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="QueryZipcodeResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/ZipcodeService" minOccurs="0" name="QueryZipcodeResult" nillable="true" type="q1:Zipcode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertZipcode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/ZipcodeService" minOccurs="0" name="zipcode" nillable="true" type="q2:Zipcode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="InsertZipcodeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateZipcode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zipcodeKey" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.datacontract.org/2004/07/ZipcodeService" minOccurs="0" name="zipcode" nillable="true" type="q3:Zipcode" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UpdateZipcodeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteZipcode">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="zipcodeKey" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="DeleteZipcodeResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

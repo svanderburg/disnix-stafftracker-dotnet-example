@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="StaffService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://localhost:50974/StaffService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://localhost:50974/StaffService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://localhost:50974/StaffService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/StaffService" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IStaffService_QueryAllStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllStaff" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_QueryAllStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryAllStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_QueryStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStaff" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_QueryStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:QueryStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_InsertStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStaff" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_InsertStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:InsertStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_UpdateStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaff" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_UpdateStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateStaffResponse" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_DeleteStaff_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStaff" />
+  </wsdl:message>
+  <wsdl:message name="IStaffService_DeleteStaff_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteStaffResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IStaffService">
+    <wsdl:operation name="QueryAllStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaffService/QueryAllStaff" message="tns:IStaffService_QueryAllStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaffService/QueryAllStaffResponse" message="tns:IStaffService_QueryAllStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="QueryStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaffService/QueryStaff" message="tns:IStaffService_QueryStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaffService/QueryStaffResponse" message="tns:IStaffService_QueryStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="InsertStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaffService/InsertStaff" message="tns:IStaffService_InsertStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaffService/InsertStaffResponse" message="tns:IStaffService_InsertStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaffService/UpdateStaff" message="tns:IStaffService_UpdateStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaffService/UpdateStaffResponse" message="tns:IStaffService_UpdateStaff_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStaff">
+      <wsdl:input wsaw:Action="http://tempuri.org/IStaffService/DeleteStaff" message="tns:IStaffService_DeleteStaff_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IStaffService/DeleteStaffResponse" message="tns:IStaffService_DeleteStaff_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IStaffService" type="tns:IStaffService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="QueryAllStaff">
+      <soap:operation soapAction="http://tempuri.org/IStaffService/QueryAllStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="QueryStaff">
+      <soap:operation soapAction="http://tempuri.org/IStaffService/QueryStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="InsertStaff">
+      <soap:operation soapAction="http://tempuri.org/IStaffService/InsertStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateStaff">
+      <soap:operation soapAction="http://tempuri.org/IStaffService/UpdateStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteStaff">
+      <soap:operation soapAction="http://tempuri.org/IStaffService/DeleteStaff" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="StaffService">
+    <wsdl:port name="BasicHttpBinding_IStaffService" binding="tns:BasicHttpBinding_IStaffService">
+      <soap:address location="http://localhost:50974/StaffService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

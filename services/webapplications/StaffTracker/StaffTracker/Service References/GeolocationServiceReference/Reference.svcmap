@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="4b0c53d6-0b34-434c-bf3f-7efc668fa808" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:50760/GeolocationService.svc?wsdl" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="GeolocationService.xsd" MetadataType="Schema" ID="29eabc53-1acd-4bd9-8e5b-460988f68d57" SourceId="1" SourceUrl="http://localhost:50760/GeolocationService.svc?xsd=xsd1" />
+    <MetadataFile FileName="GeolocationService1.xsd" MetadataType="Schema" ID="253b0e3a-8f33-413d-ba6a-38cba017f40b" SourceId="1" SourceUrl="http://localhost:50760/GeolocationService.svc?xsd=xsd0" />
+    <MetadataFile FileName="GeolocationService.wsdl" MetadataType="Wsdl" ID="c6bd2855-5087-409a-a693-51a27e6e6e8c" SourceId="1" SourceUrl="http://localhost:50760/GeolocationService.svc?wsdl" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>
