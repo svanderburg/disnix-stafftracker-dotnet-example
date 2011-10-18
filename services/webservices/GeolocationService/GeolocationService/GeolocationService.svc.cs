@@ -10,7 +10,7 @@ namespace GeolocationService
 {
     public class GeolocationService : IGeolocationService
     {
-        private static GeoIPCountry geo = new GeoIPCountry("GeoIP.dat");
+        private static GeoIPCountry geo = new GeoIPCountry(System.Web.Hosting.HostingEnvironment.ApplicationPhysicalPath + "/GeoIP.dat");
 
         public string GetCountry(string ipAddress)
         {
