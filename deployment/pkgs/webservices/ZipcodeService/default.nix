@@ -1,5 +1,5 @@
-{zipcodes}:
 {dotnetenv}:
+{zipcodes}:
 
 dotnetenv.buildSolution {
   name = "ZipcodeService";

@@ -2,6 +2,6 @@
   test1 = {
     hostname = "localhost";
     msSqlUsername = "sa";
-    msSqlPassword = "admin123$";
+    msSqlPassword = "admin123\$";
   };
 }

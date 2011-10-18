@@ -1,5 +1,5 @@
-{staff}:
 {dotnetenv}:
+{staff}:
 
 dotnetenv.buildSolution {
   name = "StaffService";

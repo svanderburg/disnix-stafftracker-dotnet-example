@@ -1,5 +1,5 @@
-{rooms}:
 {dotnetenv}:
+{rooms}:
 
 dotnetenv.buildSolution {
   name = "RoomService";
