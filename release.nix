@@ -5,22 +5,22 @@
 let
   jobs = rec {
     tarball =
-      { WebServicesExampleNET ? {outPath = ./.; rev = 1234;}
+      { disnix_stafftracker_dotnet_example ? {outPath = ./.; rev = 1234;}
       , officialRelease ? false}:
     
       let
         pkgs = import nixpkgs {};
-	
+        
         disnixos = import "${pkgs.disnixos}/share/disnixos/testing.nix" {
           inherit nixpkgs nixos;
         };
       in
       disnixos.sourceTarball {
-        name = "WebServicesExample.NET";
-	version = builtins.readFile ./version;
-	src = WebServicesExampleNET;
+        name = "disnix_stafftracker_dotnet_example";
+        version = builtins.readFile ./version;
+        src = WebServicesExampleNET;
         inherit officialRelease;
-      };    
+      };
   };
 in
 jobs
