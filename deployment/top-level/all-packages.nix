@@ -1,41 +1,30 @@
 {system, pkgs}:
 
-rec {
-### Databases
+let
+  callPackage = pkgs.lib.callPackageWith (pkgs // self);
+  
+  self = {
+    ### Databases
 
-  rooms = import ../pkgs/databases/rooms {
-    inherit (pkgs) stdenv;
-  };
+    rooms = callPackage ../pkgs/databases/rooms { };
   
-  staff = import ../pkgs/databases/staff {
-    inherit (pkgs) stdenv;
-  };
+    staff = callPackage ../pkgs/databases/staff { };
   
-  zipcodes = import ../pkgs/databases/zipcodes {
-    inherit (pkgs) stdenv;
-  };
+    zipcodes = callPackage ../pkgs/databases/zipcodes { };
   
-### Web services + Clients
+    ### Web services + Clients
 
-  GeolocationService = import ../pkgs/webservices/GeolocationService {
-    inherit (pkgs) dotnetenv;
-  };
+    GeolocationService = callPackage ../pkgs/webservices/GeolocationService { };
   
-  RoomService = import ../pkgs/webservices/RoomService {
-    inherit (pkgs) dotnetenv;
-  };
+    RoomService = callPackage ../pkgs/webservices/RoomService { };
   
-  StaffService = import ../pkgs/webservices/StaffService {
-    inherit (pkgs) dotnetenv;
-  };
+    StaffService = callPackage ../pkgs/webservices/StaffService { };
   
-  ZipcodeService = import ../pkgs/webservices/ZipcodeService {
-    inherit (pkgs) dotnetenv;
-  };
+    ZipcodeService = callPackage ../pkgs/webservices/ZipcodeService { };
   
-### Web applications
+    ### Web applications
 
-  StaffTracker = import ../pkgs/webapplications/StaffTracker {
-    inherit (pkgs) dotnetenv;
+    StaffTracker = callPackage ../pkgs/webapplications/StaffTracker { };
   };
-}
+in
+self
