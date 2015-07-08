@@ -14,7 +14,7 @@ let
         };
       in
       disnixos.sourceTarball {
-        name = "disnix_stafftracker_dotnet_example";
+        name = "disnix-stafftracker-dotnet-example";
         version = builtins.readFile ./version;
         src = disnix_stafftracker_dotnet_example;
         inherit officialRelease;
