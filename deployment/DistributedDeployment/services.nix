@@ -1,4 +1,4 @@
-{distribution, system, pkgs}:
+{distribution, invDistribution, system, pkgs}:
 
 let customPkgs = import ../top-level/all-packages.nix { inherit system pkgs; };
 in
@@ -70,6 +70,6 @@ rec {
     dependsOn = {
       inherit GeolocationService RoomService StaffService ZipcodeService;
     };
-    type = "iis-webapplication";    
+    type = "iis-webapplication";
   };
 }
